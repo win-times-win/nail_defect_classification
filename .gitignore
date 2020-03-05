@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#project specific
+/nailgun
+nailgun.zip
+2020-02-17 Data Scienctist Coding Challenge.pdf
