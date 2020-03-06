@@ -22,8 +22,6 @@ import numpy as np
 import nail_defect_detector
 import requests
 
-app = Flask(__name__)
-
 #%%
 @app.route("/")
 def index():
@@ -43,3 +41,8 @@ def predict():
     img = np.array([nail_defect_detector.image_preprocessing(img)])
     pred = nail_defect_detector.predict_prob(img)
     return json.dumps(pred)
+
+#%%
+if __name == '__main__':
+    app = Flask(__name__)
+    app.run(host='0.0.0.0')
