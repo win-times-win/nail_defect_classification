@@ -43,9 +43,3 @@ def predict():
     img = np.array([nail_defect_detector.image_preprocessing(img)])
     pred = nail_defect_detector.predict_prob(img)
     return json.dumps(pred)
-    #%%
-    resp = requests.get("https://i.ibb.co/F4t9Tc0/1522072644-bad.jpg")
-    img = Image.open(BytesIO(resp.content))
-    img = np.asarray(img, dtype="uint8")
-    img = np.array([nail_defect_detector.image_preprocessing(img)])
-    pred = nail_defect_detector.predict_prob(img)

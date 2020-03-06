@@ -6,14 +6,12 @@ predict_prob(img).
 
 import requests
 import numpy as np
-import cv2
 from skimage.morphology import remove_small_objects
+from skimage.transform import resize
 from tensorflow.keras.models import Model, load_model
 import tensorflow as tf
 
-
 m = load_model("200306_model.h5")
-
 
 def image_preprocessing(img):
     """Preprocesses a numpy array image for input into model."""
@@ -34,7 +32,7 @@ def image_preprocessing(img):
         sort_y_avg = 1000 - 200
 
     img = img[sort_x_avg - 200 : sort_x_avg + 200, sort_y_avg - 200 : sort_y_avg + 200]
-    img = cv2.resize(img, (224, 224))
+    img = resize(img, (224, 224))
     # thresholding and removing small objects to minimize noise.
     threshold = np.average(img) + np.std(img) * 0.75
     pred_temp = img.copy()
