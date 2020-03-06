@@ -130,5 +130,7 @@ dmypy.json
 
 #project specific
 /nailgun
+/checkpoint
+200306_model.h5
 nailgun.zip
 2020-02-17 Data Scienctist Coding Challenge.pdf
