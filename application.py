@@ -23,6 +23,11 @@ import nail_defect_detector
 import requests
 
 #%%
+if __name__ == '__main__':
+    app = Flask(__name__)
+    app.run(host='127.0.0.1')
+
+#%%
 @app.route("/")
 def index():
     """main page, prompts the user to enter URL to picture"""
@@ -42,7 +47,3 @@ def predict():
     pred = nail_defect_detector.predict_prob(img)
     return json.dumps(pred)
 
-#%%
-if __name == '__main__':
-    app = Flask(__name__)
-    app.run(host='0.0.0.0')
