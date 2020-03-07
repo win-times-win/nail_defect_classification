@@ -5,7 +5,7 @@ A docker Image that consists of a REST API running on Flask. API allows the user
 
 
 ## Setup
-1. Download release and unrar. 
+1. Download release and extract the contents. 
 
 2. Build docker image.
 ```shell
