@@ -9,8 +9,8 @@ A docker Image that consists of a REST API running on Flask. API allows the user
     curl http://<DOCKER-IP>:5000/predict?image_url=<nail-image-of-your-choice>  
 
 ## Main Components
-- Dockerfile:
-- requirements.txt:
+- Dockerfile
+- requirements.txt
 - application.py:
   - Flask main script.
 - nail_defect_detector.py:
