@@ -20,7 +20,7 @@ $ docker run -d -p 5000:5000 <docker-image-name-of-your-choice>
 
 ## Usage
 
-The website can be accessed by one of the following URLs. The results can be assessed by enterring the URL of your image into the input field at the website.
+The website can be accessed by one of the following URLs. The results can be assessed by entering the URL of your image into the input field at the website.
 ```shell
 http://<DOCKER-IP>:5000
 http://127.0.0.1:5000
@@ -47,7 +47,7 @@ Currently the API only works with images of size 1936x1216.
   - Conda virtual environment configuration for EDA_model_training.ipynb.
   
 ## To-do
-- Working with images with sizes that are not 1936x1216.
+- Working with images of sizes that are not 1936x1216.
 - Working with multiple nails in the same image.
 - Error checking at the server.
 
