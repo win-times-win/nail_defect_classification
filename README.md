@@ -1,5 +1,5 @@
 # Nail defect detection
-A docker Image that consists of a REST API running on Flask. API allows the user to use a CNN to identifies defect nails. 
+A docker Image that consists of a REST API running on Flask. API allows the user to use a CNN to identifies defect nails. CNN accuracy score ~0.95.
 
 ![](example.jpg)
 
