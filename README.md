@@ -5,11 +5,15 @@ A docker Image that consists of a REST API running on Flask. API allows the user
 
 ## Setup
 > 1. Download release and unrar. 
+
 > 2. Build docker image.
+
 '''shell
 $ docker build -t <docker-image-name-of-your-choice> . 
 '''
+    
 > 3. Run docker image.
+    
 '''shell
 $ docker run -d -p 5000:5000 <docker-image-name-of-your-choice>  
 '''
