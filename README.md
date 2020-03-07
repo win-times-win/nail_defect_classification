@@ -20,7 +20,7 @@ docker run -d -p 5000:5000 <docker-image-name-of-your-choice>
 
 ## Usage
 
-The website can be assessed by one of the following URLs. 
+The website can be accessed by one of the following URLs. 
 ```shell
 http://<DOCKER-IP>:5000
 http://192.0.0.1:5000
