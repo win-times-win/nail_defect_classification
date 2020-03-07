@@ -16,7 +16,7 @@ $ docker build -t <docker-image-name-of-your-choice> .
 ```shell
 $ docker run -d -p 5000:5000 <docker-image-name-of-your-choice>  
 ```
-
+4. To access the jupyter notebook used for training the model, import environment.yml as a new environment in Anaconda Navigator. 
 
 ## Usage
 
