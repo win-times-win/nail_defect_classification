@@ -15,35 +15,34 @@ the bash while you are in the script folder:
 """
 from flask import Flask
 from flask import render_template, request
-from PIL import Image
+from skimage.io import imread
 from io import BytesIO
 import json
 import numpy as np
 import nail_defect_detector
 import requests
 
-#%%
-if __name__ == '__main__':
-    app = Flask(__name__)
-    app.run(host='127.0.0.1')
+app = Flask(__name__)
 
-#%%
+
 @app.route("/")
 def index():
     """main page, prompts the user to enter URL to picture"""
     return render_template("main.html")
 
 
-#%%
 @app.route("/predict", methods=["GET"])
 def predict():
     """result page, takes a url of an image and return
     a JSON of defect probabilities"""
     data = dict(request.args)
     resp = requests.get(data["image_url"])
-    img = Image.open(BytesIO(resp.content))
+    img = imread(BytesIO(resp.content), as_gray=True)
     img = np.asarray(img, dtype="uint8")
     img = np.array([nail_defect_detector.image_preprocessing(img)])
     pred = nail_defect_detector.predict_prob(img)
     return json.dumps(pred)
+
+
+# app.run(host="127.0.0.1")
 
