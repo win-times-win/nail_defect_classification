@@ -20,7 +20,7 @@ $ docker run -d -p 5000:5000 <docker-image-name-of-your-choice>
 
 ## Usage
 
-The website can be accessed by one of the following URLs. The results can be assessed by inputting the URL of your image into the form in the website.
+The website can be accessed by one of the following URLs. The results can be assessed by enterring the URL of your image into the input field at the website.
 ```shell
 http://<DOCKER-IP>:5000
 http://127.0.0.1:5000
@@ -30,8 +30,8 @@ or it can be directly assessed from bash.
 ```shell
 $ curl http://<DOCKER-IP>:5000/predict?image_url=<nail-image-of-your-choice>  
 ```
-    
-    
+Currently the API only works with images of size 1936x1216.
+
 ## Main Components
 
 - Dockerfile
