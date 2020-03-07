@@ -9,12 +9,12 @@ A docker Image that consists of a REST API running on Flask. API allows the user
 
 2. Build docker image.
 ```shell
-docker build -t <docker-image-name-of-your-choice> . 
+$ docker build -t <docker-image-name-of-your-choice> . 
 ```
     
 3. Run docker image.
 ```shell
-docker run -d -p 5000:5000 <docker-image-name-of-your-choice>  
+$ docker run -d -p 5000:5000 <docker-image-name-of-your-choice>  
 ```
 
 
